@@ -1,0 +1,16 @@
+<%= form_with(model: category) do |form| %>
+<% @category.errors.full_messages.each do |error| %> <div style="color: red">
+  <div>
+    <p style="color:red"> <%= error %></p>
+  </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
